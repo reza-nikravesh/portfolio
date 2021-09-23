@@ -4,18 +4,16 @@ import clock from "../img/clock.svg";
 import diaphragm from "../img/diaphragm.svg";
 import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
+import styled from "styled-components";
 
-export const ServicesSection = () => {
+const ServicesSection = () => {
   return (
-    <div className="services-section">
-      <img src={home2} alt="camera" />
-
+    <Services>
       <div className="services">
         <div className="description">
           <h2 className="piece">
-            High <span>quality</span>
+            High <span>quality </span>service.
           </h2>
-          <h2 className="piece">service.</h2>
           <div className="cards">
             <div className="card">
               <div className="icon">
@@ -24,50 +22,82 @@ export const ServicesSection = () => {
               </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatibus cumque, non architecto quaerat aspernatur explicabo
-                quidem, placeat eos maiores ea et. Praesentium repellendus
                 voluptates molestias cum vero saepe voluptate temporibus!
               </p>
             </div>
-          </div>
-          <div className="card">
-            <div className="icon">
-              <img src={diaphragm} alt="" />
-              <h3>Efficient</h3>
+            <div className="card">
+              <div className="icon">
+                <img src={diaphragm} alt="" />
+                <h3>Teamwork</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus cumque, non architecto quaerat aspernatur explicabo
+              </p>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus cumque, non architecto quaerat aspernatur explicabo
-              quidem, placeat eos maiores ea et. Praesentium repellendus
-              voluptates molestias cum vero saepe voluptate temporibus!
-            </p>
+            <div className="card">
+              <div className="icon">
+                <img src={money} alt="" />
+                <h3>Pro Grade Gear</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                voluptates molestias cum vero saepe voluptate temporibus!
+              </p>
+            </div>
+            <div className="card">
+              <div className="icon">
+                <img src={teamwork} alt="" />
+                <h3>Affordable</h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus cumque, non architecto quaerat aspernatur explicabo
+              </p>
+            </div>
           </div>
         </div>
-        <div className="card">
-          <div className="icon">
-            <img src={money} alt="" />
-            <h3>Efficient</h3>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus cumque, non architecto quaerat aspernatur explicabo
-            quidem, placeat eos maiores ea et. Praesentium repellendus
-            voluptates molestias cum vero saepe voluptate temporibus!
-          </p>
-        </div>
       </div>
-      <div className="card">
-        <div className="icon">
-          <img src={teamwork} alt="" />
-          <h3>Efficient</h3>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-          cumque, non architecto quaerat aspernatur explicabo quidem, placeat
-          eos maiores ea et. Praesentium repellendus voluptates molestias cum
-          vero saepe voluptate temporibus!
-        </p>
-      </div>
-    </div>
+      <img src={home2} alt="camera" />
+    </Services>
   );
 };
+
+const Services = styled.div`
+  display: flex;
+  padding: 5rem 9rem;
+  min-height: 90vh;
+  .piece {
+    color: white;
+    font-weight: lighter;
+    font-size: 4.2rem;
+  }
+  .piece span {
+    color: #23d997;
+    font-weight: bold;
+  }
+  .cards {
+    grid-gap: 0.5rem;
+    margin: 2rem 0;
+    width: 70%;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+  }
+  .card {
+    color: #ccc;
+    margin: 0.5rem;
+    .icon {
+      margin: 0.3rem 0;
+      display: flex;
+      align-items: center;
+      h3 {
+        background-color: white;
+        margin-left: 0.3rem;
+        padding: 0.3rem;
+        color: #1b1b1b;
+      }
+    }
+  }
+`;
+
+export default ServicesSection;
