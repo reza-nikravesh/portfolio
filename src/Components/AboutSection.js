@@ -1,6 +1,7 @@
 import React from "react";
 import home1 from "../img/home1.png";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 const AboutSection = () => {
   return (
     <AboutUsSection>
@@ -16,7 +17,9 @@ const AboutSection = () => {
           Join the World's leading platform for health, happiness, and
           performance.
         </p>
-        <button>Contact us</button>
+        <Link to="/contact">
+          <button>Contact us</button>
+        </Link>
       </div>
       <img src={home1} alt="camera man" />
     </AboutUsSection>

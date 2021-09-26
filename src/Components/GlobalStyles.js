@@ -12,6 +12,7 @@ body{
     background: #1b1b1b;
 }
 button{
+    
     background-color: transparent;
     font-weight: bold;
     font-size: 1.1rem;
