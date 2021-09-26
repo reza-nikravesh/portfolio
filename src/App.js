@@ -4,6 +4,8 @@ import Nav from "./Components/Nav";
 import ContactUs from "./Pages/ContactUs";
 import OurWork from "./Pages/OurWork";
 import { Route, Switch } from "react-router";
+import { MovieDetails } from "./Pages/MovieDetails";
+import MovieState from "./Data/MovieState";
 
 function App() {
   return (
@@ -17,8 +19,11 @@ function App() {
         <Route path="/contact">
           <ContactUs />
         </Route>
-        <Route path="/work">
+        <Route path="/work" exact>
           <OurWork />
+        </Route>
+        <Route path="/work/:id">
+          <MovieDetails />
         </Route>
       </Switch>
     </div>
