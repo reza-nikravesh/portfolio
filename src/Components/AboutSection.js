@@ -3,12 +3,11 @@ import home1 from "../img/home1.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { titleAnimation } from "../Animation";
+import { fade, pageAnimation, photoAnim, titleAnimation } from "../Animation";
 
 const AboutSection = () => {
-  
   return (
-    <AboutUsSection>
+    <AboutUsSection variants={pageAnimation}>
       <div className="description">
         <motion.div
           variants={titleAnimation}
@@ -16,30 +15,43 @@ const AboutSection = () => {
           animate="show"
           className="title"
         >
-          <motion.h2 variants={titleAnimation} className="piece">
-            We work to make
-          </motion.h2>
-          <motion.h2 variants={titleAnimation} className="piece">
-            your <span>dreames</span> come
-          </motion.h2>
-          <motion.h2 variants={titleAnimation} className="piece">
-            true.
-          </motion.h2>
+          <Hide>
+            <motion.h2 variants={titleAnimation} className="piece">
+              We work to make
+            </motion.h2>
+          </Hide>
+          <Hide>
+            <motion.h2 variants={titleAnimation} className="piece">
+              your <span>dreames</span> come
+            </motion.h2>
+          </Hide>
+          <Hide>
+            <motion.h2 variants={titleAnimation} className="piece">
+              true.
+            </motion.h2>
+          </Hide>
         </motion.div>
-        <motion.p variants={titleAnimation}>
+        <motion.p variants={fade}>
           Join the World's leading platform for health, happiness, and
           performance.
         </motion.p>
         <Link to="/contact">
-          <button>Contact us</button>
+          <motion.button variants={fade}>Contact us</motion.button>
         </Link>
       </div>
-      <img src={home1} alt="camera man" />
+      <motion.img
+        variants={photoAnim}
+        src={home1}
+        alt="camera man"
+      />
     </AboutUsSection>
   );
 };
-
-const AboutUsSection = styled.div`
+const Hide = styled.div`
+  min-height: 5rem;
+  overflow: hidden;
+`;
+const AboutUsSection = styled(motion.div)`
   min-height: 90vh;
   display: flex;
   align-items: center;
