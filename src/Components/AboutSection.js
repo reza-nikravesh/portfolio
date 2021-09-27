@@ -11,10 +11,7 @@ const AboutSection = () => {
     <AboutUsSection variants={pageAnimation}>
       <Wave />
       <motion.div className="description">
-        <motion.div
-          variants={titleAnimation}
-          className="title"
-        >
+        <motion.div variants={titleAnimation} className="title">
           <Hide>
             <motion.h2 variants={titleAnimation} className="piece">
               We work to make
@@ -39,13 +36,16 @@ const AboutSection = () => {
           <motion.button variants={fade}>Contact us</motion.button>
         </Link>
       </motion.div>
-      <motion.img variants={photoAnim} src={home1} alt="camera man" />
+      <Hide>
+        <motion.img variants={photoAnim} src={home1} alt="camera man" />
+      </Hide>
     </AboutUsSection>
   );
 };
 const Hide = styled.div`
   min-height: 5rem;
   overflow: hidden;
+  z-index: 2;
 `;
 const AboutUsSection = styled(motion.div)`
   min-height: 90vh;
