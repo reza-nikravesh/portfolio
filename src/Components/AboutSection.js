@@ -2,21 +2,34 @@ import React from "react";
 import home1 from "../img/home1.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { titleAnimation } from "../Animation";
+
 const AboutSection = () => {
+  
   return (
     <AboutUsSection>
       <div className="description">
-        <div className="title">
-          <h2 className="piece">We work to make</h2>
-          <h2 className="piece">
+        <motion.div
+          variants={titleAnimation}
+          initial="hide"
+          animate="show"
+          className="title"
+        >
+          <motion.h2 variants={titleAnimation} className="piece">
+            We work to make
+          </motion.h2>
+          <motion.h2 variants={titleAnimation} className="piece">
             your <span>dreames</span> come
-          </h2>
-          <h2 className="piece">true.</h2>
-        </div>
-        <p>
+          </motion.h2>
+          <motion.h2 variants={titleAnimation} className="piece">
+            true.
+          </motion.h2>
+        </motion.div>
+        <motion.p variants={titleAnimation}>
           Join the World's leading platform for health, happiness, and
           performance.
-        </p>
+        </motion.p>
         <Link to="/contact">
           <button>Contact us</button>
         </Link>

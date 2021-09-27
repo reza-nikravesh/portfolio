@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import React, { Fragment, useEffect, useState } from "react";
 import { useHistory } from "react-router";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { pageAnimation } from "../Animation";
 import MovieState from "../Data/MovieState";
 
 export const MovieDetails = () => {
@@ -18,7 +19,7 @@ export const MovieDetails = () => {
   return (
     <>
       {movie && (
-        <Details>
+        <Details variants={pageAnimation} initial="hide" animate="show">
           <Headline>
             <h2>{movie === null ? null : movie.title}</h2>
             <img src={movie === null ? null : movie.mainImg} alt="item.title" />
@@ -41,7 +42,7 @@ export const MovieDetails = () => {
   );
 };
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: white;
 `;
 const Headline = styled.div`
