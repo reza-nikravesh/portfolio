@@ -4,15 +4,15 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fade, pageAnimation, photoAnim, titleAnimation } from "../Animation";
+import { Wave } from "./Wave";
 
 const AboutSection = () => {
   return (
     <AboutUsSection variants={pageAnimation}>
-      <div className="description">
+      <Wave />
+      <motion.div className="description">
         <motion.div
           variants={titleAnimation}
-          initial="hide"
-          animate="show"
           className="title"
         >
           <Hide>
@@ -38,12 +38,8 @@ const AboutSection = () => {
         <Link to="/contact">
           <motion.button variants={fade}>Contact us</motion.button>
         </Link>
-      </div>
-      <motion.img
-        variants={photoAnim}
-        src={home1}
-        alt="camera man"
-      />
+      </motion.div>
+      <motion.img variants={photoAnim} src={home1} alt="camera man" />
     </AboutUsSection>
   );
 };
@@ -58,6 +54,9 @@ const AboutUsSection = styled(motion.div)`
   justify-content: space-between;
   padding: 5rem 7rem;
   color: white;
+  img {
+    z-index: 2;
+  }
   h2 {
     font-weight: lighter;
     font-size: 4rem;
@@ -75,6 +74,8 @@ const AboutUsSection = styled(motion.div)`
     color: #23d997;
     font-weight: bold;
   }
+  .description {
+    z-index: 2;
+  }
 `;
-
 export default AboutSection;

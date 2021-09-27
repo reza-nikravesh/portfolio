@@ -1,9 +1,9 @@
 //**pages animation**
 export const pageAnimation = {
-  hide: { opacity: 0, transition: { duration: 1 }, y: 300 },
+  hide: { opacity: 0, y: 300 },
   show: {
     opacity: 1,
-    transition: { duration: 1, staggerChildren: 0.5 },
+    transition: { duration: 1, staggerChildren: 1 },
     when: "beforeChildren",
     y: 0,
   },
@@ -11,6 +11,7 @@ export const pageAnimation = {
 //**pages animation**
 
 //**About us page**
+
 //about section
 export const titleAnimation = {
   hide: { opacity: 1, y: 100 },
@@ -37,6 +38,11 @@ export const photoAnim = {
     opacity: 1,
     transition: { ease: "easeOut", duration: 0.5 },
   },
+};
+
+export const waveAnim = {
+  hide: { pathLength: 0, pathOffset: 1 },
+  show: { pathLength: 1, pathOffset: 2, transition: { duration: 2 } },
 };
 
 //**About us page**
