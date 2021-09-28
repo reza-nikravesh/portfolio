@@ -42,6 +42,13 @@ export const waveAnim = {
   show: { pathLength: 1, pathOffset: 2, transition: { duration: 2 } },
 };
 
+//Faq section
+
+export const faqAnim = {
+  hide: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.5 } },
+};
+
 //**About us page**
 /***************************************************************/
 //**ourWork page**

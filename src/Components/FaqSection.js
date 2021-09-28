@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { AnimateSharedLayout, motion } from "framer-motion";
 
 const FaqSection = () => {
   return (
@@ -10,8 +11,21 @@ const FaqSection = () => {
           <span>FAQ</span>
         </h2>
       </div>
-      <div className="question">
-        <h4>HOW DO I START?</h4>
+      <AnimateSharedLayout>
+        <Toggle title="HOW DO I START?">
+          <div className="answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+              nostrum recusandae debitis a, enim aliquid facilis, rem veniam
+              itaque ad ipsa, ut illum! Ex eaque libero vitae fugit eius illum?
+            </p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
+      <Toggle title="Daily scheduel">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto</p>
           <p>
@@ -20,9 +34,8 @@ const FaqSection = () => {
             ipsa, ut illum! Ex eaque libero vitae fugit eius illum?
           </p>
         </div>
-      </div>
-      <div className="question">
-        <h4>Daily scheduel</h4>
+      </Toggle>
+      <Toggle title="Diferrent Payment Methods">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto</p>
           <p>
@@ -31,9 +44,8 @@ const FaqSection = () => {
             ipsa, ut illum! Ex eaque libero vitae fugit eius illum?
           </p>
         </div>
-      </div>
-      <div className="question">
-        <h4>Diferrent Payment Methods</h4>
+      </Toggle>
+      <Toggle title="What Products do you offer">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto</p>
           <p>
@@ -42,19 +54,18 @@ const FaqSection = () => {
             ipsa, ut illum! Ex eaque libero vitae fugit eius illum?
           </p>
         </div>
-      </div>
-      <div className="question">
-        <h4>What Products do you offer</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nostrum
-            recusandae debitis a, enim aliquid facilis, rem veniam itaque ad
-            ipsa, ut illum! Ex eaque libero vitae fugit eius illum?
-          </p>
-        </div>
-      </div>
+      </Toggle>
     </Faq>
+  );
+};
+
+export const Toggle = ({ children, title }) => {
+  const [toggle, setToggle] = useState(false);
+  return (
+    <motion.div layout className="question" onClick={() => setToggle(!toggle)}>
+      <motion.h4 layout>{title}</motion.h4>
+      {toggle ? children : ""}
+    </motion.div>
   );
 };
 
