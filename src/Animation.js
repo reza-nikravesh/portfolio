@@ -14,7 +14,7 @@ export const pageAnimation = {
 
 //about section
 export const titleAnimation = {
-  hide: { opacity: 1, y: 100 },
+  hide: { opacity: 1, y: 1000 },
   show: {
     opacity: 1,
     y: 0,
@@ -43,7 +43,6 @@ export const waveAnim = {
 };
 
 //Faq section
-
 export const faqAnim = {
   hide: { opacity: 0 },
   show: { opacity: 1, transition: { duration: 0.5 } },
@@ -63,7 +62,7 @@ export const slider = {
   show: {
     x: "100%",
     skew: "0deg",
-    transition: { ease: "easeOut", duration: 1, staggerChildren: 0.5 },
+    transition: { ease: "easeOut", duration: 1 },
   },
 };
 export const sliderContainer = {

@@ -1,18 +1,34 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { AnimateSharedLayout, motion } from "framer-motion";
-
+import { useInView } from "react-intersection-observer";
+import { UseScroll } from "./UseScroll";
 const FaqSection = () => {
   return (
-    <Faq>
-      <div className="description">
-        <h2>Any question?</h2>
-        <h2>
-          <span>FAQ</span>
-        </h2>
-      </div>
-      <AnimateSharedLayout>
-        <Toggle title="HOW DO I START?">
+    <UseScroll>
+      <Faq>
+        <div className="description">
+          <h2>Any question?</h2>
+          <h2>
+            <span>FAQ</span>
+          </h2>
+        </div>
+        <AnimateSharedLayout>
+          <Toggle title="HOW DO I START?">
+            <div className="answer">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                nostrum recusandae debitis a, enim aliquid facilis, rem veniam
+                itaque ad ipsa, ut illum! Ex eaque libero vitae fugit eius
+                illum?
+              </p>
+            </div>
+          </Toggle>
+        </AnimateSharedLayout>
+        <Toggle title="Daily scheduel">
           <div className="answer">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
@@ -24,38 +40,32 @@ const FaqSection = () => {
             </p>
           </div>
         </Toggle>
-      </AnimateSharedLayout>
-      <Toggle title="Daily scheduel">
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nostrum
-            recusandae debitis a, enim aliquid facilis, rem veniam itaque ad
-            ipsa, ut illum! Ex eaque libero vitae fugit eius illum?
-          </p>
-        </div>
-      </Toggle>
-      <Toggle title="Diferrent Payment Methods">
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nostrum
-            recusandae debitis a, enim aliquid facilis, rem veniam itaque ad
-            ipsa, ut illum! Ex eaque libero vitae fugit eius illum?
-          </p>
-        </div>
-      </Toggle>
-      <Toggle title="What Products do you offer">
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nostrum
-            recusandae debitis a, enim aliquid facilis, rem veniam itaque ad
-            ipsa, ut illum! Ex eaque libero vitae fugit eius illum?
-          </p>
-        </div>
-      </Toggle>
-    </Faq>
+        <Toggle title="Diferrent Payment Methods">
+          <div className="answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+              nostrum recusandae debitis a, enim aliquid facilis, rem veniam
+              itaque ad ipsa, ut illum! Ex eaque libero vitae fugit eius illum?
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="What Products do you offer">
+          <div className="answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+              nostrum recusandae debitis a, enim aliquid facilis, rem veniam
+              itaque ad ipsa, ut illum! Ex eaque libero vitae fugit eius illum?
+            </p>
+          </div>
+        </Toggle>
+      </Faq>
+    </UseScroll>
   );
 };
 

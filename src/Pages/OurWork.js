@@ -3,7 +3,14 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import MovieState from "../Data/MovieState";
 import { motion } from "framer-motion";
-import { fade, lineAnim, pageAnimation, photoAnim, slider, sliderContainer } from "../Animation";
+import {
+  fade,
+  lineAnim,
+  pageAnimation,
+  photoAnim,
+  slider,
+  sliderContainer,
+} from "../Animation";
 const OurWork = () => {
   return (
     <>

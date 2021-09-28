@@ -5,65 +5,71 @@ import diaphragm from "../img/diaphragm.svg";
 import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { UseScroll } from "./UseScroll";
 
 const ServicesSection = () => {
   return (
-    <Services>
-      <div className="services">
-        <div className="description">
-          <h2 className="piece">
-            High <span>quality </span>service.
-          </h2>
-          <div className="cards">
-            <div className="card">
-              <div className="icon">
-                <img src={clock} alt="" />
-                <h3>Efficient</h3>
+    <UseScroll>
+      <Services>
+        <div className="services">
+          <div className="description">
+            <h2 className="piece">
+              High <span>quality </span>service.
+            </h2>
+            <div className="cards">
+              <div className="card">
+                <div className="icon">
+                  <img src={clock} alt="" />
+                  <h3>Efficient</h3>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  voluptates molestias cum vero saepe voluptate temporibus!
+                </p>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                voluptates molestias cum vero saepe voluptate temporibus!
-              </p>
-            </div>
-            <div className="card">
-              <div className="icon">
-                <img src={diaphragm} alt="" />
-                <h3>Teamwork</h3>
+              <div className="card">
+                <div className="icon">
+                  <img src={diaphragm} alt="" />
+                  <h3>Teamwork</h3>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus cumque, non architecto quaerat aspernatur
+                  explicabo
+                </p>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatibus cumque, non architecto quaerat aspernatur explicabo
-              </p>
-            </div>
-            <div className="card">
-              <div className="icon">
-                <img src={money} alt="" />
-                <h3>Pro Grade Gear</h3>
+              <div className="card">
+                <div className="icon">
+                  <img src={money} alt="" />
+                  <h3>Pro Grade Gear</h3>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  voluptates molestias cum vero saepe voluptate temporibus!
+                </p>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                voluptates molestias cum vero saepe voluptate temporibus!
-              </p>
-            </div>
-            <div className="card">
-              <div className="icon">
-                <img src={teamwork} alt="" />
-                <h3>Affordable</h3>
+              <div className="card">
+                <div className="icon">
+                  <img src={teamwork} alt="" />
+                  <h3>Affordable</h3>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus cumque, non architecto quaerat aspernatur
+                  explicabo
+                </p>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatibus cumque, non architecto quaerat aspernatur explicabo
-              </p>
             </div>
           </div>
         </div>
-      </div>
-      <img src={home2} alt="camera" />
-    </Services>
+        <img src={home2} alt="camera" />
+      </Services>
+    </UseScroll>
   );
 };
 
-const Services = styled.div`
+const Services = styled(motion.div)`
   display: flex;
   padding: 5rem 9rem;
   min-height: 90vh;
