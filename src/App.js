@@ -7,11 +7,24 @@ import { Route, Switch } from "react-router";
 import { useLocation } from "react-router-dom";
 import { MovieDetails } from "./Pages/MovieDetails";
 import { AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import Pages from "./Data/Pages";
 function App() {
   const location = useLocation();
+  const [pages, setPages] = useState(Pages());
+  const [currentPage, setCurrentPage] = useState(
+    pages.filter((item) => item.active === true)[0]
+  );
+  useEffect(() => {
+    setCurrentPage(pages.filter((item) => item.url === location.pathname)[0]);
+  });
   return (
     <div className="App">
-      <Nav />
+      <Nav
+        pages={pages}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+      />
       <GlobalStyle />
       <AnimatePresence exitBeforeEnter>
         <Switch Location={location} key={location.pathname}>

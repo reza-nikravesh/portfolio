@@ -1,3 +1,9 @@
+//nav
+export const underLineAnim = {
+  hide: { width: "0%" },
+  show: { width: "100%", transition: { duration: 0.5 } },
+};
+
 //**pages animation**
 export const pageAnimation = {
   hide: { opacity: 0, y: 300 },
