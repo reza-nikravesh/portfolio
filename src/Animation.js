@@ -14,6 +14,15 @@ export const pageAnimation = {
     y: 0,
   },
 };
+export const contactPageAnimation = {
+  hide: { opacity: 0, y: 300 },
+  show: {
+    opacity: 1,
+    transition: { duration: 1, staggerChildren: 0.5 },
+    when: "beforeChildren",
+    y: 0,
+  },
+};
 //**pages animation**
 /***************************************************************/
 //**About us page**
