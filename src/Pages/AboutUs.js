@@ -7,11 +7,11 @@ import ServicesSection from "../Components/ServicesSection";
 
 const AboutUs = () => {
   return (
-    <motion.div variants={pageAnimation} initial="hide" animate="show">
-      <AboutSection />
-      <ServicesSection />
-      <FaqSection />
-    </motion.div>
+      <motion.div variants={pageAnimation} initial="hide" animate="show">
+        <AboutSection />
+        <ServicesSection />
+        <FaqSection />
+      </motion.div>
   );
 };
 export default AboutUs;

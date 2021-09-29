@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { useLocation } from "react-router-dom";
 import { underLineAnim } from "../Animation";
 
 export const Nav = ({ pages, currentPage, setCurrentPage }) => {
@@ -53,6 +52,9 @@ const NavItem = styled(motion.div)`
 `;
 
 const NavBar = styled.nav`
+  z-index: 10;
+  top: 0;
+  position: sticky;
   display: flex;
   min-height: 10vh;
   justify-content: space-between;

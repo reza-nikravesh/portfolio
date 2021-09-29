@@ -9,6 +9,8 @@ import { MovieDetails } from "./Pages/MovieDetails";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Pages from "./Data/Pages";
+import ScrollToTop from "./Components/ScrollToTop";
+
 function App() {
   const location = useLocation();
   const [pages, setPages] = useState(Pages());
@@ -26,6 +28,7 @@ function App() {
         setCurrentPage={setCurrentPage}
       />
       <GlobalStyle />
+      <ScrollToTop />
       <AnimatePresence exitBeforeEnter>
         <Switch Location={location} key={location.pathname}>
           <Route path="/" exact>
