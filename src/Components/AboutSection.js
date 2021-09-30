@@ -9,7 +9,7 @@ import { Wave } from "./Wave";
 const AboutSection = () => {
   return (
     <AboutUsSection variants={pageAnimation}>
-      {/* <Wave /> */}
+      <Wave />
       <motion.div className="description">
         <motion.div variants={titleAnimation} className="title">
           <Hide>
