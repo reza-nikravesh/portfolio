@@ -10,7 +10,7 @@ import { UseScroll } from "./UseScroll";
 
 const ServicesSection = () => {
   return (
-    <UseScroll vieww={5}>
+    <UseScroll vieww={0.5}>
       <Services>
         <div className="services">
           <div className="description">
