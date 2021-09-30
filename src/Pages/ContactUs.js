@@ -33,10 +33,14 @@ const ContactUsStyle = styled(motion.div)`
   padding: 5rem 10rem;
   color: #353535;
   min-height: 90vh;
+  @media screen and (max-width: 460px) {
+    padding: 1rem;
+  }
 `;
 const Title = styled(motion.h1)`
   margin-bottom: 4rem;
   color: black;
+
 `;
 const Hide = styled.div`
   overflow: hidden;
