@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { UseScroll } from "./UseScroll";
 const FaqSection = () => {
   return (
-    <UseScroll>
+    <UseScroll vieww={0.5}>
       <Faq>
         <div className="description">
           <h2>Any question?</h2>
