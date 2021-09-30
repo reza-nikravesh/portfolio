@@ -10,7 +10,7 @@ import { UseScroll } from "./UseScroll";
 
 const ServicesSection = () => {
   return (
-    <UseScroll>
+    <UseScroll vieww={5}>
       <Services>
         <div className="services">
           <div className="description">
@@ -73,13 +73,15 @@ const Services = styled(motion.div)`
   display: flex;
   padding: 5rem 9rem;
   min-height: 90vh;
+
   @media screen and (max-width: 460px) {
     padding: 1rem;
+    text-align: center;
     display: block;
   }
   .home2 {
     @media screen and (max-width: 460px) {
-      width: 100%;
+      width: 90%;
     }
   }
   .piece {
@@ -97,6 +99,7 @@ const Services = styled(motion.div)`
     width: 70%;
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
+    text-align: start;
   }
   .card {
     color: #ccc;

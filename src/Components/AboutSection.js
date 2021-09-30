@@ -48,7 +48,6 @@ const Hide = styled.div`
   z-index: 2;
 `;
 const AboutUsSection = styled(motion.div)`
-  width: 100%;
   min-height: 90vh;
   display: flex;
   align-items: center;
@@ -57,17 +56,14 @@ const AboutUsSection = styled(motion.div)`
   color: white;
   @media screen and (max-width: 460px) {
     display: block;
-    width: 90%;
     padding: 0.5rem;
     margin: 0;
   }
   .home1 {
     @media screen and (max-width: 460px) {
-      width: 100vw;
     }
     img {
       @media screen and (max-width: 460px) {
-        width: 100%;
         min-height: 100vh;
       }
       z-index: 2;
@@ -99,7 +95,6 @@ const AboutUsSection = styled(motion.div)`
     z-index: 2;
     @media screen and (max-width: 460px) {
       min-height: 90vh;
-      width: 100vw;
       padding: 0.5rem;
     }
   }
