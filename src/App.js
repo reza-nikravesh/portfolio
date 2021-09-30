@@ -10,6 +10,7 @@ import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Pages from "./Data/Pages";
 import ScrollToTop from "./Components/ScrollToTop";
+import styled from "styled-components";
 
 function App() {
   const location = useLocation();
@@ -21,12 +22,12 @@ function App() {
     setCurrentPage(pages.filter((item) => item.url === location.pathname)[0]);
   });
   return (
-    <div className="App">
-      <Nav
+    <AppStyle>
+      {/* <Nav
         pages={pages}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
-      />
+      /> */}
       <GlobalStyle />
       <ScrollToTop />
       <AnimatePresence exitBeforeEnter>
@@ -45,8 +46,12 @@ function App() {
           </Route>
         </Switch>
       </AnimatePresence>
-    </div>
+    </AppStyle>
   );
 }
 
+const AppStyle = styled.div`
+  @media screen and (max-width: 460px) {
+  }
+`;
 export default App;

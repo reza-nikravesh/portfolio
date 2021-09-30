@@ -88,6 +88,10 @@ const Faq = styled.div`
     color: white;
     font-size: 4rem;
     font-weight: 100;
+    @media screen and (max-width: 460px) {
+    font-size: 3rem;
+
+    }
     & span {
       color: #23d997;
       font-weight: bold;

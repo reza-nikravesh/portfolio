@@ -54,13 +54,17 @@ const NavItem = styled(motion.div)`
 const NavBar = styled.nav`
   z-index: 10;
   top: 0;
-  position: sticky;
   display: flex;
   min-height: 10vh;
   justify-content: space-between;
   align-items: center;
   padding: 0 8rem;
   background-color: #282828;
+  @media screen and (max-width: 460px) {
+    border: 2px solid red;
+    display: block;
+    padding: 0;
+  }
   h1 {
     font-family: "Lobster", cursive;
     color: white;
@@ -74,9 +78,18 @@ const NavBar = styled.nav`
   }
   ul {
     display: flex;
+    @media screen and (max-width: 460px) {
+      margin-top: 1rem;
+      width: 100%;
+    }
     li {
+      @media screen and (max-width: 460px) {
+        margin: 0 1rem;
+
+      }
       margin: 0 3rem;
       list-style: none;
+      text-align: center;
       a {
         text-decoration: none;
         color: white;

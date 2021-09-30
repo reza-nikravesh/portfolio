@@ -63,7 +63,7 @@ const ServicesSection = () => {
             </div>
           </div>
         </div>
-        <img src={home2} alt="camera" />
+        <img className="home2" src={home2} alt="camera" />
       </Services>
     </UseScroll>
   );
@@ -73,6 +73,15 @@ const Services = styled(motion.div)`
   display: flex;
   padding: 5rem 9rem;
   min-height: 90vh;
+  @media screen and (max-width: 460px) {
+    padding: 1rem;
+    display: block;
+  }
+  .home2 {
+    @media screen and (max-width: 460px) {
+      width: 100%;
+    }
+  }
   .piece {
     color: white;
     font-weight: lighter;

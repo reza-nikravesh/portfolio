@@ -9,7 +9,7 @@ import { Wave } from "./Wave";
 const AboutSection = () => {
   return (
     <AboutUsSection variants={pageAnimation}>
-      <Wave />
+      {/* <Wave /> */}
       <motion.div className="description">
         <motion.div variants={titleAnimation} className="title">
           <Hide>
@@ -36,7 +36,7 @@ const AboutSection = () => {
           <motion.button variants={fade}>Contact us</motion.button>
         </Link>
       </motion.div>
-      <Hide>
+      <Hide className="home1">
         <motion.img variants={photoAnim} src={home1} alt="camera man" />
       </Hide>
     </AboutUsSection>
@@ -48,18 +48,39 @@ const Hide = styled.div`
   z-index: 2;
 `;
 const AboutUsSection = styled(motion.div)`
+  width: 100%;
   min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 5rem 7rem;
   color: white;
-  img {
-    z-index: 2;
+  @media screen and (max-width: 460px) {
+    display: block;
+    width: 90%;
+    padding: 0.5rem;
+    margin: 0;
   }
+  .home1 {
+    @media screen and (max-width: 460px) {
+      width: 100vw;
+    }
+    img {
+      @media screen and (max-width: 460px) {
+        width: 100%;
+        min-height: 100vh;
+      }
+      z-index: 2;
+      object-fit: cover;
+    }
+  }
+
   h2 {
     font-weight: lighter;
     font-size: 4rem;
+    @media screen and (max-width: 460px) {
+      font-size: 2.7rem;
+    }
   }
   h3 {
     color: white;
@@ -76,6 +97,11 @@ const AboutUsSection = styled(motion.div)`
   }
   .description {
     z-index: 2;
+    @media screen and (max-width: 460px) {
+      min-height: 90vh;
+      width: 100vw;
+      padding: 0.5rem;
+    }
   }
 `;
 export default AboutSection;
