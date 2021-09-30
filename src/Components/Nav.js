@@ -61,7 +61,6 @@ const NavBar = styled.nav`
   padding: 0 8rem;
   background-color: #282828;
   @media screen and (max-width: 460px) {
-    border: 2px solid red;
     display: block;
     padding: 0;
   }
@@ -85,7 +84,6 @@ const NavBar = styled.nav`
     li {
       @media screen and (max-width: 460px) {
         margin: 0 1rem;
-
       }
       margin: 0 3rem;
       list-style: none;

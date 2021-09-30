@@ -49,6 +49,10 @@ const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
+
+  @media screen and (max-width: 460px) {
+    padding: 1rem;
+  }
 `;
 const Movie = styled(motion.div)`
   padding-bottom: 10rem;

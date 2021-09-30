@@ -49,6 +49,9 @@ const Headline = styled.div`
   min-height: 90vh;
   padding-top: 20vh;
   position: relative;
+  @media screen and (max-width: 460px) {
+    min-height: 60vh;
+  }
   h2 {
     position: absolute;
     top: 10%;
@@ -56,6 +59,9 @@ const Headline = styled.div`
     transform: translate(-50%, -10%);
   }
   img {
+    @media screen and (max-width: 460px) {
+      height: 40vh;
+    }
     width: 100%;
     height: 70vh;
     object-fit: cover;
@@ -67,6 +73,10 @@ const Awards = styled.div`
   margin: 5rem 10rem;
   align-items: center;
   justify-content: space-around;
+  @media screen and (max-width: 460px) {
+    margin: 0;
+    display: block;
+  }
 `;
 
 const AwardStyle = styled.div`
@@ -87,10 +97,15 @@ const AwardStyle = styled.div`
 `;
 const ImageDisplay = styled.div`
   min-height: 50vh;
+
   img {
     width: 100%;
     height: 100vh;
     object-fit: cover;
+    @media screen and (max-width: 460px) {
+      width: 100%;
+      height: 30vh;
+    }
   }
 `;
 //award component
