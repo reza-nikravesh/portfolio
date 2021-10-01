@@ -23,11 +23,11 @@ function App() {
   });
   return (
     <AppStyle>
-      {/* <Nav
+      <Nav
         pages={pages}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
-      /> */}
+      />
       <GlobalStyle />
       <ScrollToTop />
       <AnimatePresence exitBeforeEnter>
